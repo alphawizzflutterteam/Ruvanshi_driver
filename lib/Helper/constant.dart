@@ -1,4 +1,4 @@
-final String appName = 'Deshii Multistore Driver';
+final String appName = 'Ruvanshi Driver';
 
 final String baseUrl =
     'https://developmentalphawizz.com/ruvanshi/delivery_boy/app/v1/api/';
@@ -70,6 +70,8 @@ const String PRICE_DETAIL = 'Price Detail';
 const String PRICE_LBL = 'Price';
 const String DELIVERY_CHARGE = 'Delivery Charge';
 const String TAXPER = 'Tax';
+const String CGST = 'CGST';
+const String SGST = 'SGST';
 const String PROMO_CODE_DIS_LBL = 'Promo Code Discount';
 const String WALLET_BAL = 'Wallet Balance';
 const String TOTAL_PRICE = 'Total Price';

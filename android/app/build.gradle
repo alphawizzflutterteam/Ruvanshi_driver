@@ -34,7 +34,7 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     compileSdkVersion 35
-    namespace "com.desiimultistore.driver"
+    namespace "com.ruvanshi.driver"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -44,7 +44,7 @@ android {
 
 
     defaultConfig {
-        applicationId "com.desiimultistore.driver"
+        applicationId "com.ruvanshi.driver"
         minSdkVersion 23
         targetSdkVersion 35
         versionCode flutterVersionCode.toInteger()

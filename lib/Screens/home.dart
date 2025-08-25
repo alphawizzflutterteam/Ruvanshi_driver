@@ -127,7 +127,7 @@ class StateHome extends State<Home> with TickerProviderStateMixin {
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                // _detailHeader(),
+                                _detailHeader(),
                                 orderList.isEmpty
                                     ? isLoadingItems
                                         ? const Center(
@@ -260,8 +260,8 @@ class StateHome extends State<Home> with TickerProviderStateMixin {
               _getHeader(),
               Divider(),
               _getDrawerItem(0, HOME_LBL, Icons.home_outlined),
-              // _getDrawerItem(7, WALLET, Icons.account_balance_wallet_outlined),
-              // _getDrawerItem(5, NOTIFICATION, Icons.notifications_outlined),
+              _getDrawerItem(7, WALLET, Icons.account_balance_wallet_outlined),
+              _getDrawerItem(5, NOTIFICATION, Icons.notifications_outlined),
               _getDivider(),
               _getDrawerItem(8, PRIVACY, Icons.lock_outline),
               _getDrawerItem(9, TERM, Icons.speaker_notes_outlined),
@@ -558,6 +558,7 @@ class StateHome extends State<Home> with TickerProviderStateMixin {
           LIMIT: perPage.toString(),
           OFFSET: offset.toString()
         };
+        print('oderlist:_____${parameter}______');
         if (activeStatus != null) {
           if (activeStatus == awaitingPayment) activeStatus = "awaiting";
           parameter[ACTIVE_STATUS] = activeStatus;
@@ -696,7 +697,7 @@ class StateHome extends State<Home> with TickerProviderStateMixin {
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        Text("Order No.${model.id!}"),
+                        Text("Order No.RU${model.id!}"),
                         const Spacer(),
                         Container(
                           margin: const EdgeInsets.only(left: 8),
@@ -824,7 +825,7 @@ orderList.clear();*/
     return Row(
       children: [
         Expanded(
-          flex: 2,
+          flex: 1,
           child: Card(
               elevation: 0,
               child: Padding(
@@ -846,7 +847,7 @@ orderList.clear();*/
               )),
         ),
         Expanded(
-          flex: 3,
+          flex: 1,
           child: Card(
             elevation: 0,
             child: Padding(
@@ -868,34 +869,34 @@ orderList.clear();*/
             ),
           ),
         ),
-        Expanded(
-          flex: 2,
-          child: Card(
-            elevation: 0,
-            child: Padding(
-              padding: const EdgeInsets.all(18.0),
-              child: Column(
-                children: [
-                  const Icon(
-                    Icons.wallet_giftcard,
-                    color: fontColor,
-                  ),
-                  const Text(BONUS_LBL),
-                  // Text(
-                  //   "${CUR_CURRENCY!} ${CUR_BONUS!}",
-                  //   style: const TextStyle(
-                  //       color: fontColor, fontWeight: FontWeight.bold),
-                  // )
-                  Text(
-                    "${CUR_CURRENCY!} ${CUR_BONUS ?? ''}",
-                    style: const TextStyle(
-                        color: fontColor, fontWeight: FontWeight.bold),
-                  )
-                ],
-              ),
-            ),
-          ),
-        ),
+        // Expanded(
+        //   flex: 2,
+        //   child: Card(
+        //     elevation: 0,
+        //     child: Padding(
+        //       padding: const EdgeInsets.all(18.0),
+        //       child: Column(
+        //         children: [
+        //           const Icon(
+        //             Icons.wallet_giftcard,
+        //             color: fontColor,
+        //           ),
+        //           const Text(BONUS_LBL),
+        //           // Text(
+        //           //   "${CUR_CURRENCY!} ${CUR_BONUS!}",
+        //           //   style: const TextStyle(
+        //           //       color: fontColor, fontWeight: FontWeight.bold),
+        //           // )
+        //           Text(
+        //             "${CUR_CURRENCY!} ${CUR_BONUS ?? ''}",
+        //             style: const TextStyle(
+        //                 color: fontColor, fontWeight: FontWeight.bold),
+        //           )
+        //         ],
+        //       ),
+        //     ),
+        //   ),
+        // ),
       ],
     );
   }

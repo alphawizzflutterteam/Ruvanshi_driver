@@ -550,7 +550,7 @@ class _LoginPageState extends State<Login> with TickerProviderStateMixin {
                       setPass(),
                       forgetPass(),
                       loginBtn(),
-                      signupTxt(),
+                      // signupTxt(),
                       termAndPolicyTxt(),
                     ],
                   ),

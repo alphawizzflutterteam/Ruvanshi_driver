@@ -251,7 +251,11 @@ Widget getNoItem() {
   return Center(child: Text(noItem));
 }
 
-String capitalize(String s) => s[0].toUpperCase() + s.substring(1);
+// String capitalize(String s) => s[0].toUpperCase() + s.substring(1);
+String capitalize(String? s) {
+  if (s == null || s.isEmpty) return '';
+  return s[0].toUpperCase() + s.substring(1);
+}
 
 Widget shimmer() {
   return Container(
