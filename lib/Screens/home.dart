@@ -697,7 +697,7 @@ class StateHome extends State<Home> with TickerProviderStateMixin {
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        Text("Order No.RU${model.id!}"),
+                        Text("Order Number.RU${model.id!}"),
                         const Spacer(),
                         Container(
                           margin: const EdgeInsets.only(left: 8),

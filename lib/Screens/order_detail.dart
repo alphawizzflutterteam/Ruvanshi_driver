@@ -550,16 +550,20 @@ class StateOrder extends State<OrderDetail> with TickerProviderStateMixin {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("$CGST:",
-                        style: Theme.of(context)
-                            .textTheme
-                            .button!
-                            .copyWith(color: lightBlack2)),
-                    Text("+ ${CUR_CURRENCY!} ${widget.model!.cgstAmount!}",
-                        style: Theme.of(context)
-                            .textTheme
-                            .button!
-                            .copyWith(color: lightBlack2))
+                    Text(
+                      "${CGST ?? 'CGST'}:",
+                      style: Theme.of(context)
+                          .textTheme
+                          .button!
+                          .copyWith(color: lightBlack2),
+                    ),
+                    Text(
+                      "+ ${(CUR_CURRENCY ?? '')} ${(widget.model?.cgstAmount ?? '0')}",
+                      style: Theme.of(context)
+                          .textTheme
+                          .button!
+                          .copyWith(color: lightBlack2),
+                    ),
                   ],
                 ),
               ),
@@ -568,19 +572,24 @@ class StateOrder extends State<OrderDetail> with TickerProviderStateMixin {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("$SGST:",
-                        style: Theme.of(context)
-                            .textTheme
-                            .button!
-                            .copyWith(color: lightBlack2)),
-                    Text("+ ${CUR_CURRENCY!} ${widget.model!.sgstAmount!}",
-                        style: Theme.of(context)
-                            .textTheme
-                            .button!
-                            .copyWith(color: lightBlack2))
+                    Text(
+                      "${SGST ?? 'SGST'}:",
+                      style: Theme.of(context)
+                          .textTheme
+                          .button!
+                          .copyWith(color: lightBlack2),
+                    ),
+                    Text(
+                      "+ ${(CUR_CURRENCY ?? '')} ${(widget.model?.sgstAmount ?? '0')}",
+                      style: Theme.of(context)
+                          .textTheme
+                          .button!
+                          .copyWith(color: lightBlack2),
+                    ),
                   ],
                 ),
               ),
+
               Padding(
                 padding: const EdgeInsets.only(left: 15.0, right: 15.0),
                 child: Row(
