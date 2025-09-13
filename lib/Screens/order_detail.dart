@@ -509,24 +509,24 @@ class StateOrder extends State<OrderDetail> with TickerProviderStateMixin {
                   ],
                 ),
               ),
-              // Padding(
-              //   padding: const EdgeInsets.only(left: 15.0, right: 15.0),
-              //   child: Row(
-              //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //     children: [
-              //       Text("$DELIVERY_CHARGE :",
-              //           style: Theme.of(context)
-              //               .textTheme
-              //               .button!
-              //               .copyWith(color: lightBlack2)),
-              //       Text("+ ${CUR_CURRENCY!} ${widget.model!.delCharge!}",
-              //           style: Theme.of(context)
-              //               .textTheme
-              //               .button!
-              //               .copyWith(color: lightBlack2))
-              //     ],
-              //   ),
-              // ),
+              Padding(
+                padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("$DELIVERY_CHARGE :",
+                        style: Theme.of(context)
+                            .textTheme
+                            .button!
+                            .copyWith(color: lightBlack2)),
+                    Text("+ ${CUR_CURRENCY!} ${widget.model!.delCharge!}",
+                        style: Theme.of(context)
+                            .textTheme
+                            .button!
+                            .copyWith(color: lightBlack2))
+                  ],
+                ),
+              ),
               // Padding(
               //   padding: const EdgeInsets.only(left: 15.0, right: 15.0),
               //   child: Row(
